@@ -1,0 +1,377 @@
+/* Fondo de la página */
+body {
+    background-color: #FFC0CB; /* Un gris claro */
+    color: #333; /* Color de texto oscuro para buena legibilidad */
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+ h1{
+    font-family: 'Robos', sans-serif;  /* Usando la fuente de Google Fonts */
+    color: #0a0a0a;  /* Color del texto */
+    font-size: 2.5rem;  /* Tamaño del texto */
+    font-weight: 500;  /* Grosor de la fuente */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+img:hover {
+    transform: scale(1.05); /* Efecto de zoom */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5); /* Sombra más fuerte al pasar el mouse */
+}
+
+
+/* Animación de entrada para el título */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de escritura para los textos */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.service-back p {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+    border-right: 3px solid white;
+    font-size: 18px;
+    font-weight: bold;
+    animation: typing 2s steps(40, end) forwards, blink 0.75s step-end infinite;
+}
+
+/* Estilo de las tarjetas */
+.services-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.service-box {
+    width: 250px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.service-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s;
+}
+
+.service-box:hover .service-inner {
+    transform: rotateY(180deg);
+}
+
+.service-front, .service-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-front {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Diseño del reverso de la tarjeta */
+.service-back {
+    background: linear-gradient(135deg, #ff7eb3, #bb8fce);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotateY(180deg);
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+/* Ajuste del efecto de escritura */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+.service-back p {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid white;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    animation: typing 5.0s steps(30, end) forwards;
+}
+
+/* Fondo de la sección */
+.mision-vision {
+    background-color: #FFC0CB; /* Color claro */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.mision-vision h2 {
+    font-family: 'Arial', sans-serif;
+    font-size: 2rem;
+    color: #0e0d0d;
+    font-weight: bold;
+}
+
+.mision-vision p {
+    font-size: 1rem;
+    color: #928888;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+}
+
+/* Efecto de fade-in en la entrada de los textos */
+.fade-in-text {
+    opacity: 0;
+    animation: fadeInText 5s forwards;
+}
+
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Estilo para las columnas de misión y visión */
+.mision, .vision {
+    padding: 20px;
+}
+
+/* Efecto de sombra y levantamiento en las tarjetas al pasar el mouse */
+.mision:hover, .vision:hover {
+    box-shadow: 0 8px 16px #bb8fce;
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto de deslizamiento desde la izquierda para la misión */
+.mision {
+    animation: slideInLeft 1s ease-out forwards;
+}
+
+/* Efecto de deslizamiento desde la derecha para la visión */
+.vision {
+    animation: slideInRight 1s ease-out forwards;
+}
+
+/* Deslizamiento desde la izquierda */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Deslizamiento desde la derecha */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+ /* Estilo del catálogo */
+ .catalog-section {
+    padding: 60px 0;
+    background-color: #FFC0CB;
+}
+
+.product-card {
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.catalog-section h2 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
+}
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color:#ca9fdb;
+}
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+.product-info {
+    padding: 15px;
+    text-align: center;
+}
+.product-info h4 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #faf6f6;
+}
+.product-info p {
+    color: #faf4f4;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Lobster', cursive; /* Cambiar tipo de letra */
+    text-align: center;
+    font-size: 3rem;
+    color: #333;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+/* Efecto de subrayado y color en el texto */
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #28a745;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+    font-family: 'Lobster', cursive;
+}
+
+h2:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Efecto de color de texto */
+h2:hover {
+    color: #28a745;
+}
+
+
+.gallery img {
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+.team-member {
+    transition: transform 0.3s ease-in-out;
+}
+.team-member:hover {
+    transform: translateY(-10px);
+}
+/* Asegurar que el footer quede al fondo */
+html, body {
+    height: 100%;  /* Asegurarse de que el HTML y el BODY ocupen toda la altura de la pantalla */
+    margin: 0;  /* Eliminar márgenes predeterminados */
+}
+
+body {
+    display: flex;
+    flex-direction: column;  /* Coloca el contenido en una columna */
+}
+
+.main-content {
+    flex: 1;  /* Permite que el contenido principal ocupe todo el espacio disponible */
+}
+
+
+.float-wa{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom:40px;
+    right:40px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    z-index:100;
+}
